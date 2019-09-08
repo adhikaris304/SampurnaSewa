@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "51800438192",
+    "firebase_url": "https://sampurnasewa-e1332.firebaseio.com",
+    "project_id": "sampurnasewa-e1332",
+    "storage_bucket": "sampurnasewa-e1332.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51800438192:android:76cef63982f402f16c1275",
+        "android_client_info": {
+          "package_name": "com.example.sampurnasewa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51800438192-pr0jvd1jjaatthtqcjjncn48bupepant.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sampurnasewa",
+            "certificate_hash": "089fa37de09dc4305ab9b8aaf39f46c77a917c44"
+          }
+        },
+        {
+          "client_id": "51800438192-nqutu754pub0q4qnpk32a8otllbnbiem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSnofNCZhDNswZy35GbDxqx-w9pehLw9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51800438192-nqutu754pub0q4qnpk32a8otllbnbiem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
