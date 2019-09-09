@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignupActivity extends AppCompatActivity {
 
-    private EditText inputEmail, inputPassword;
+    private EditText regemail, regpassword, regfullname, regusername, regphoneno, regaddress;
     private Button btnSignIn, btnSignUp;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
@@ -34,8 +34,12 @@ public class SignupActivity extends AppCompatActivity {
 
         btnSignIn = (Button) findViewById(R.id.sign_in_button);
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
-        inputEmail = (EditText) findViewById(R.id.regemail);
-        inputPassword = (EditText) findViewById(R.id.regpassword);
+        regemail = (EditText) findViewById(R.id.regemail);
+        regaddress = findViewById(R.id.regaddress);
+        regfullname=findViewById(R.id.regfullname);
+        regphoneno=findViewById(R.id.regphoneno);
+        regusername=findViewById(R.id.regusername);
+        regpassword = (EditText) findViewById(R.id.regpassword);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
@@ -50,11 +54,31 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+                String email = regemail.getText().toString().trim();
+                String password = regpassword.getText().toString().trim();
+                String fullname = regfullname.getText().toString().trim();
+                String username = regusername.getText().toString().trim();
+                String phoneno = regphoneno.getText().toString().trim();
+                String address = regaddress.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(fullname)) {
+                    Toast.makeText(getApplicationContext(), "Enter fullname!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(username)) {
+                    Toast.makeText(getApplicationContext(), "Enter Username!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(phoneno)) {
+                    Toast.makeText(getApplicationContext(), "Enter Phonwe number!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(address)) {
+                    Toast.makeText(getApplicationContext(), "Enter address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -83,7 +107,8 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
-                                    startActivity(new Intent(SignupActivity.this, MainActivity.class));
+                                    Toast.makeText(SignupActivity.this, "Authentication Success", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(SignupActivity.this, LoginActivity.class));
                                     finish();
                                 }
                             }
